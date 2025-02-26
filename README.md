@@ -146,13 +146,6 @@ If you use LLMCoder in your research, please cite our paper:
 }
 ```
 
-## Team
-
-- Zhen Hou, M.S. - Indiana University, Indianapolis
-- Hao Liu, Ph.D. - Montclair State University
-- Jiang Bian, Ph.D. - Indiana University, Indianapolis
-- Xing He, Ph.D. - Indiana University, Indianapolis
-- Yan Zhuang, Ph.D. - Indiana University, Indianapolis
 
 ## License
 
