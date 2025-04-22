@@ -58,46 +58,6 @@ The repository includes sample data for demonstration:
 # Clone the repository
 git clone https://github.com/hzvictor/LLMCoder.git
 cd LLMCoder
-
-# Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### Running the Notebooks
-
-1. Start Jupyter Lab:
-```bash
-jupyter lab
-```
-
-2. Open and run the notebooks in sequence (1-5) to replicate our workflow.
-
-3. For model inference on new data:
-```python
-# Load the model
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-# Load tokenizer and model
-tokenizer = AutoTokenizer.from_pretrained("path/to/saved/model")
-model = AutoModelForCausalLM.from_pretrained("path/to/saved/model")
-
-# Prepare prompt
-prompt = f"""You are a medical coding specialist responsible for assigning ICD-10 codes to clinical documentation.
-
-Generate appropriate ICD-10 codes from the following clinical note:
-
-{your_clinical_note}"""
-
-# Generate prediction
-inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
-outputs = model.generate(**inputs, max_length=512)
-result = tokenizer.decode(outputs[0], skip_special_tokens=True)
-print(result)
 ```
 
 ## Datasets
